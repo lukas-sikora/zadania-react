@@ -1,5 +1,14 @@
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+const UserList = () => {
+  ;<div>
+    <h2>Lista naszych użytkowników</h2>
+    <ul>
+      <li>Anna</li>
+      <li>Bartek</li>
+      <li>Cecylia</li>
+    </ul>
+  </div>
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<UserList />)
