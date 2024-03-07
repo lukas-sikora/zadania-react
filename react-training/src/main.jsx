@@ -1,15 +1,5 @@
 import ReactDOM from 'react-dom/client'
-
-const CityWeather = (props) => {
-  return (
-    <p>
-      <strong>
-        {props.city}: {props.temperature}°C,
-      </strong>
-      {props.description}
-    </p>
-  )
-}
+import CityWeather from './components/CityWeather'
 
 const WeatherWidget = () => {
   return (
