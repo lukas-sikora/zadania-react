@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom/client'
 
-const CityWeather = ({ city, temperature, description }) => {
+const CityWeather = (props) => {
   return (
     <p>
       <strong>
-        {city}: {temperature}°C,
+        {props.city}: {props.temperature}°C,
       </strong>
-      {description}
+      {props.description}
     </p>
   )
 }
