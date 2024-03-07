@@ -1,21 +1,24 @@
 import ReactDOM from 'react-dom/client'
 
+const CityWeather = ({ city, temperature, description }) => {
+  return (
+    <p>
+      <strong>
+        {city}: {temperature}°C,
+      </strong>
+      {description}
+    </p>
+  )
+}
+
 const WeatherWidget = () => {
   return (
     <div>
       <h2>Prognoza pogody</h2>
-      <p>
-        <strong>Lublin: 25°C,</strong> słonecznie
-      </p>
-      <p>
-        <strong>Warszawa: 20°C,</strong> deszczowo
-      </p>
-      <p>
-        <strong>Poznań: 24°C,</strong> słonecznie
-      </p>
-      <p>
-        <strong>Wrocław: 22°C,</strong> częściowo zachmurzone
-      </p>
+      <CityWeather city='Lublin' temperature={25} description='słonecznie' />
+      <CityWeather city='Warszawa' temperature={20} description='deszczowo' />
+      <CityWeather city='Poznań' temperature={24} description='słonecznie' />
+      <CityWeather city='Wrocław' temperature={22} description='zachmurzenie' />
     </div>
   )
 }
