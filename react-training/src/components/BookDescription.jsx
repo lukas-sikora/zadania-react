@@ -1,14 +1,18 @@
+import { useState } from "react";
+
 const BookDescription = ({ bookDescription, bookTitle }) => {
-  let showDescription = false;
+  const [showDescription, setShowDescription] = useState(false);
 
   const toggleDescription = () => {
-    showDescription = !showDescription;
+    setShowDescription((prev) => !prev);
   };
 
   return (
     <>
       <h2>{bookTitle}</h2>
-      <button onClick={toggleDescription}>Pokaż opis</button>
+      <button onClick={toggleDescription}>
+        {showDescription ? "Ukryj opis" : "Pokaż opis"}
+      </button>
       {showDescription && <p>{bookDescription}</p>}
     </>
   );
