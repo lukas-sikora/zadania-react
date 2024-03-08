@@ -1,5 +1,8 @@
 const showCurrentTime = () => {
-  // Tutaj wprowadź logikę wyświetlająca alert z aktualną godziną
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, "0");
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+  alert(`Aktualna godzina to: ${hours}:${minutes}`);
 };
 
 const App = () => {
