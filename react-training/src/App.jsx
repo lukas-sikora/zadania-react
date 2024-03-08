@@ -1,8 +1,9 @@
 import ToggleContent from "./components/ToggleContent";
+import ColorfulWrapper from "./components/ColorfulWrapper";
 
 const App = () => {
   return (
-    <>
+    <ColorfulWrapper bgColor="black" textColor="white">
       <h1>Interesujące fakty o kosmosie:</h1>
       <ToggleContent label="Pokaż/ukryj treść">
         <p>
@@ -16,7 +17,7 @@ const App = () => {
           masę około 6 miliardów ton.
         </p>
       </ToggleContent>
-    </>
+    </ColorfulWrapper>
   );
 };
 
