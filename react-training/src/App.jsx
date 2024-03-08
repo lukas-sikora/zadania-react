@@ -3,7 +3,7 @@ import { useState } from "react";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+  const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 
   return (
     <div
