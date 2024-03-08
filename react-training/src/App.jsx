@@ -4,7 +4,7 @@ const callAlert = (text) => {
 
 const App = () => {
   return (
-    <button onClick={callAlert("Uwaga, mam ważny komunikat!")}>
+    <button onClick={() => callAlert("Uwaga, mam ważny komunikat!")}>
       Kliknij mnie!
     </button>
   );
