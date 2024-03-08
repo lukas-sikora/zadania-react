@@ -1,5 +1,9 @@
-function App() {
-  return <div></div>
-}
+const showCurrentTime = () => {
+  // Tutaj wprowadź logikę wyświetlająca alert z aktualną godziną
+};
 
-export default App
+const App = () => {
+  return <button onClick={showCurrentTime}>Pokaż aktualną godzinę</button>;
+};
+
+export default App;
