@@ -1,9 +1,9 @@
 const BookDescription = ({ bookDescription, bookTitle }) => {
   let showDescription = false;
 
-  function toggleDescription() {
+  const toggleDescription = () => {
     showDescription = !showDescription;
-  }
+  };
 
   return (
     <>
