@@ -4,7 +4,7 @@ const FavoriteBooks = ({ user }) => {
       <h2>
         {user.name} - {user.favoriteBook}
       </h2>
-      {user.pagesRead && <span>Przeczytane strony: {user.pagesRead}</span>}
+      {user.pagesRead > 0 && <span>Przeczytane strony: {user.pagesRead}</span>}
       <hr />
     </>
   );
