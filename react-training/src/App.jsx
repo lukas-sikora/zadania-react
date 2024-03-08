@@ -1,4 +1,4 @@
-import { ProductDetails } from "./components/ProductDetails";
+import ProductDetails from "./components/ProductDetails";
 
 const product1 = {
   name: "Laptop",
