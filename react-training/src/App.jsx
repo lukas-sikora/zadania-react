@@ -1,4 +1,4 @@
-import { FavoriteBooks } from "./components/FavoriteBooks";
+import FavoriteBooks from "./components/FavoriteBooks";
 
 const user1 = {
   name: "Jan Kowalski",
