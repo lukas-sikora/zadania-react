@@ -1,5 +1,13 @@
-function App() {
-  return <div></div>
-}
+const callAlert = (text) => {
+  alert(text);
+};
 
-export default App
+const App = () => {
+  return (
+    <button onClick={callAlert("Uwaga, mam ważny komunikat!")}>
+      Kliknij mnie!
+    </button>
+  );
+};
+
+export default App;
