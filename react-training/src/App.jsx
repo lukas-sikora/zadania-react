@@ -1,5 +1,23 @@
-function App() {
-  return <div></div>
-}
+import ToggleContent from "./components/ToggleContent";
 
-export default App
+const App = () => {
+  return (
+    <>
+      <h1>Interesujące fakty o kosmosie:</h1>
+      <ToggleContent label="Pokaż/ukryj treść">
+        <p>
+          W kosmosie występuje kompletna cisza, ponieważ dźwięk wymaga medium do
+          podróżowania, a próżnia kosmiczna tego nie zapewnia.
+        </p>
+      </ToggleContent>
+      <ToggleContent label="Pokaż/ukryj treść">
+        <p>
+          Gwiazda neutronowa jest tak gęsta, że jedna łyżeczka jej materiału ma
+          masę około 6 miliardów ton.
+        </p>
+      </ToggleContent>
+    </>
+  );
+};
+
+export default App;
