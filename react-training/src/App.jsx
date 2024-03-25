@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const App = () => {
   const [color, setColor] = useState("");
-
   const [selectedColor, setSelectedColor] = useState(null);
 
   const handleSubmit = (e) => {
