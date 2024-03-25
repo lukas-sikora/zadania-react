@@ -1,5 +1,7 @@
-function App() {
-  return <div></div>
-}
+import ColorPickerApp from "./components/ColorPickerApp";
 
-export default App
+const App = () => {
+  return <ColorPickerApp />;
+};
+
+export default App;
