@@ -1,11 +1,18 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+const schema = z.object({
+  title: z.string().min(1, { message: "Tytuł jest wymagany" }),
+  description: z.string().min(1, { message: "Opis jest wymagany" }),
+});
 
 const App = () => {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -15,7 +22,13 @@ const App = () => {
   });
 
   const onSubmit = async (data) => {
-    // Tutaj symulacja zapisu danych
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+        alert("Przepis dodany pomyślnie!");
+        reset(); // Reset formularza
+      }, 2000); // Symulacja asynchronicznego zapisu
+    });
   };
 
   return (
@@ -30,6 +43,7 @@ const App = () => {
           id="title"
           placeholder="Tytuł"
         />
+        {errors?.title && <p>{errors.title.message}</p>}
       </div>
       <div>
         <div>
@@ -41,6 +55,7 @@ const App = () => {
           placeholder="Opis"
           rows={4}
         />
+        {errors?.description && <p>{errors.description.message}</p>}
       </div>
       <button type="submit" disabled={isSubmitting}>
         Wyślij
@@ -48,5 +63,4 @@ const App = () => {
     </form>
   );
 };
-
 export default App;
