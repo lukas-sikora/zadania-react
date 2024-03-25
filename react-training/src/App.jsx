@@ -1,5 +1,7 @@
+import TaskApp from "./components/TaskApp";
+
 const App = () => {
-  return <div></div>;
+  return <TaskApp />;
 };
 
 export default App;

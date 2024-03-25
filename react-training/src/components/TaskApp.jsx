@@ -4,7 +4,8 @@ const TaskApp = () => {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  const handleAddTask = () => {
+  const handleAddTask = (e) => {
+    e.preventDefault(); // Zapobiegamy domyślnej akcji przeglądarki
     setTasks([...tasks, task]);
     setTask("");
   };
@@ -12,18 +13,18 @@ const TaskApp = () => {
   return (
     <>
       <h1>Lista zadań:</h1>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ul>
       <form onSubmit={handleAddTask}>
         <input
           onChange={(e) => setTask(e.target.value)}
           value={task}
           placeholder="Dodaj nowe zadanie"
         />
-        <button type="button">Dodaj</button>
+        <button type="submit">Dodaj</button> {/* Zmieniamy typ na "submit" */}
+        <ul>
+          {tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+          ))}
+        </ul>
       </form>
     </>
   );
