@@ -1,31 +1,26 @@
 import { useState } from "react";
 
 const ColorPickerApp = () => {
-  const [color, setColor] = useState("");
-
-  const [selectedColor, setSelectedColor] = useState(null);
+  const [color, setColor] = useState("red"); // Ustawienie domyślnej wartości
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSelectedColor(color);
+    // Nie jest potrzebne dodatkowe ustawienie stanu, ponieważ `color` już przechowuje wybrany kolor
   };
 
   return (
     <>
       <h1>Wybierz kolor:</h1>
-      {selectedColor && (
-        <h2 style={{ backgroundColor: selectedColor }}>
-          Wybrano kolor: {selectedColor}
-        </h2>
-      )}
+      <h2 style={{ backgroundColor: color }}>Wybrano kolor: {color}</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>
             Czerwony
             <input
               type="radio"
-              value="czerwony"
-              checked={color === "czerwony"}
+              name="color"
+              value="red"
+              checked={color === "red"}
               onChange={(e) => setColor(e.target.value)}
             />
           </label>
@@ -35,8 +30,9 @@ const ColorPickerApp = () => {
             Zielony
             <input
               type="radio"
-              value="zielony"
-              checked={color === "zielony"}
+              name="color"
+              value="green"
+              checked={color === "green"}
               onChange={(e) => setColor(e.target.value)}
             />
           </label>
@@ -46,8 +42,9 @@ const ColorPickerApp = () => {
             Niebieski
             <input
               type="radio"
-              value="niebieski"
-              checked={color === "niebieski"}
+              name="color"
+              value="blue"
+              checked={color === "blue"}
               onChange={(e) => setColor(e.target.value)}
             />
           </label>
