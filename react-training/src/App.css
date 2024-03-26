@@ -11,11 +11,3 @@ body {
 .list {
   list-style-type: none;
 }
-
-.course-title {
-  font-size: 24px;
-}
-
-.course-level {
-  font-weight: bold;
-}
