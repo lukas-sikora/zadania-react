@@ -1,4 +1,5 @@
 import Photo from "./components/Photo";
+import styles from "./app.module.css";
 
 const photos = [
   {
@@ -23,9 +24,9 @@ const photos = [
 
 const App = () => {
   return (
-    <div className="gallery">
-      <h1 className="title">Galeria zdjęć przyrody</h1>
-      <div className="photos">
+    <div className={styles.gallery}>
+      <h1 className={styles.title}>Galeria zdjęć przyrody</h1>
+      <div className={styles.photos}>
         {photos.map((photo) => (
           <Photo key={photo.id} photo={photo} />
         ))}
