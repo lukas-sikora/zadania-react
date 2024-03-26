@@ -7,6 +7,6 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px;
 `;
 export default StyledButton;
