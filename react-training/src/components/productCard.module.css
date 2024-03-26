@@ -1,0 +1,23 @@
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.img--S {
+  width: 80%;
+}
+
+.img--M {
+  width: 100%;
+}
+
+.img--L {
+  width: 120%;
+}

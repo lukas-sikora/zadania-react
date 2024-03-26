@@ -1,5 +1,7 @@
-function App() {
-  return <div></div>
-}
+import ProductCard from "./components/ProductCard";
 
-export default App
+const App = () => {
+  return <ProductCard />;
+};
+
+export default App;
