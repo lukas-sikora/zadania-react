@@ -1,5 +1,5 @@
 import Course from "./components/Course";
-import "./App.css"; // dodany import
+import "./app.css"; // dodany import
 
 const courses = [
   {

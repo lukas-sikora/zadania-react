@@ -1,4 +1,4 @@
-import "./Course.css"; // dodany import
+import "./course.css"; // dodany import
 
 const Course = ({ course }) => {
   return (
