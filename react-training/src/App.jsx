@@ -1,8 +1,11 @@
+import Button from "./components/ButtonStyled";
+import Header from "./components/HeaderStyled";
+
 const App = () => {
   return (
     <div>
-      <h1>Witaj w aplikacji!</h1>
-      <button>Kliknij mnie</button>
+      <Header>Witaj w aplikacji!</Header>
+      <Button>Kliknij mnie</Button>
     </div>
   );
 };
