@@ -1,13 +1,11 @@
 body {
   font-family: sans-serif;
 }
-
 .title {
   font-size: 36px;
   color: #333;
   text-align: center;
 }
-
 .list {
   list-style-type: none;
 }
