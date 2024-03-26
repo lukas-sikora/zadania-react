@@ -1,5 +1,7 @@
+import BookList from "./components/BookList";
+
 const App = () => {
-  return <div></div>;
+  return <BookList />;
 };
 
 export default App;
