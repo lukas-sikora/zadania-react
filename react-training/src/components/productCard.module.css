@@ -1,5 +1,10 @@
 .card {
-  width: 300px;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
@@ -11,13 +16,13 @@
 }
 
 .img--S {
-  width: 80%;
+  scale: 0.8;
 }
 
 .img--M {
-  width: 100%;
+  scale: 1;
 }
 
 .img--L {
-  width: 120%;
+  scale: 1.2;
 }
