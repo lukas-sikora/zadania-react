@@ -5,7 +5,7 @@ const ClickCounter = () => {
 
   useEffect(() => {
     alert(`Ilość kliknięć: ${count}`);
-  }, [count]);
+  }, []); // Zmiana tablicy zależności na pustą spowoduje wykonanie funkcji po pierwszym renderowaniu komponentu
 
   return (
     <div>
