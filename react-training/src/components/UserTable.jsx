@@ -7,7 +7,6 @@ const usersData = [
 const UsersTable = () => {
   return (
     <div>
-      <h1>Lista Użytkowników</h1>
       <input type="text" placeholder="Filtruj po imieniu..." />
       <table>
         <thead>
