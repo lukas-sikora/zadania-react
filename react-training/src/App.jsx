@@ -5,7 +5,7 @@ const App = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h1>Welcome in Couter App</h1>
+      <h1>Aplikacja licznik</h1>
       <ClickCounter />
     </div>
   );
