@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const users = [
   { id: 1, name: "Anna", age: 28 },
@@ -9,6 +9,13 @@ const users = [
 const App = () => {
   const [sortedUsers, setSortedUsers] = useState(users);
   const [sortOrder, setSortOrder] = useState("ascending");
+
+  useEffect(() => {
+    const sorted = [...users].sort((a, b) =>
+      sortOrder === "ascending" ? a.age - b.age : b.age - a.age
+    );
+    setSortedUsers(sorted);
+  }, [sortOrder]);
 
   return (
     <div>
