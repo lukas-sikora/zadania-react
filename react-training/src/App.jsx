@@ -4,10 +4,10 @@ import { Header, Content } from "./components";
 import ThemeContext from "./context/ThemeContext";
 
 const App = () => {
-  const theme = useContext(ThemeContext);
+  const backgroundColor = useContext(ThemeContext);
 
   return (
-    <div style={{ padding: "20px", backgroundColor: theme.green }}>
+    <div style={{ padding: "20px", backgroundColor }}>
       <Header />
       <Content />
       <footer style={{ padding: "10px", fontSize: "14px" }}>
