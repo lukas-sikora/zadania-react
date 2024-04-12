@@ -9,7 +9,10 @@ const PhotoBrowserApp = () => {
           gap: "10px",
         }}
       >
-        Zdjęcia
+        <div style={{ marginBottom: "20px" }}>
+          <img style={{ width: "100%" }} />
+          <p>Title:</p>
+        </div>
       </div>
     </>
   );
