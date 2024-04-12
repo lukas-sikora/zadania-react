@@ -1,24 +1,26 @@
-const posts = [
-  {
-    title:
-      "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-    body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-    id: 1,
-  },
-  {
-    title: "qui est esse",
-    body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-    id: 2,
-  },
-];
+import { useState, useEffect } from "react";
 
 const App = () => {
+  const [posts, setPosts] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((data) => setPosts(data.slice(0, 5)));
+  }, [refresh]);
+
+  const refreshPosts = () => {
+    setRefresh((prev) => !prev);
+    console.log("Odświeżono listę postów");
+  };
+
   return (
     <div>
       <h1>Lista postów</h1>
-      <button>Odśwież</button>
+      <button onClick={refreshPosts}>Odśwież</button>
       <ul>
-        {posts.map(({ id, title, body }) => (
+        {posts.map((id, title, body) => (
           <li key={id}>
             <h2>{title}</h2>
             <p>{body}</p>
@@ -28,5 +30,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
