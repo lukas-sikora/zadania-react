@@ -20,7 +20,7 @@ const App = () => {
       <h1>Lista postów</h1>
       <button onClick={refreshPosts}>Odśwież</button>
       <ul>
-        {posts.map((id, title, body) => (
+        {posts.map(({ id, title, body }) => (
           <li key={id}>
             <h2>{title}</h2>
             <p>{body}</p>
