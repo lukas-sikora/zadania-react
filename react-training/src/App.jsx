@@ -1,10 +1,13 @@
-import Product from "./components/Product";
+import { CurrencySelector, Product } from "./components";
+import CurrencyProvider from "./context/CurrencyContext";
 
 const App = () => {
   return (
-    <div>
+    <CurrencyProvider>
+      <CurrencySelector />
       <Product price={10} />
-    </div>
+    </CurrencyProvider>
   );
 };
+
 export default App;
