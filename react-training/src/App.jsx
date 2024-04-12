@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import { Header, Body } from "./componets";
+import { Body, Header } from "./componets";
+import { LanguageContext, ThemeContext } from "./context";
 
 const App = () => {
   const [language, setLanguage] = useState("PL");
@@ -16,8 +17,12 @@ const App = () => {
         <option value="light">Jasny</option>
         <option value="dark">Ciemny</option>
       </select>
-      <Header />
-      <Body />
+      <ThemeContext.Provider value={theme}>
+        <LanguageContext.Provider value={language}>
+          <Header />
+          <Body />
+        </LanguageContext.Provider>
+      </ThemeContext.Provider>
     </>
   );
 };
