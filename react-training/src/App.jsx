@@ -1,5 +1,16 @@
-const App = () => {
-  return <div></div>;
-};
+import { Button } from "./Button";
 
-export default App;
+export const App = () => {
+  const defaultButtonConfig = {
+    label: "Kliknij mnie",
+    onClick: () => alert("Kliknięto przycisk"),
+    type: "button",
+  };
+
+  return (
+    <>
+      <p>Prosty komponent z przyciskiem.</p>
+      <Button />
+    </>
+  );
+};
