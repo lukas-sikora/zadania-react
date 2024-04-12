@@ -7,6 +7,7 @@ const getCurrentTime = () => {
   const seconds = String(now.getSeconds()).padStart(2, "0");
   return `${hours}:${minutes}:${seconds}`;
 };
+
 const Timer = () => {
   const [time, setTime] = useState("");
 
