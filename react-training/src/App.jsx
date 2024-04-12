@@ -7,7 +7,7 @@ const App = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <div style={{ backgroundColor: theme.green }}>
+    <div style={{ padding: "20px", backgroundColor: theme.green }}>
       <Header />
       <Content />
       <footer style={{ padding: "10px", fontSize: "14px" }}>
