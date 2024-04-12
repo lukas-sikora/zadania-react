@@ -1,11 +1,19 @@
+import { useState } from "react";
+
 import Timer from "./components/Timer";
 
 const App = () => {
+  const [isActive, setIsActive] = useState(true);
+
+  const toggleTimer = () => {
+    setIsActive((prev) => !prev);
+  };
+
   return (
     <>
       <h1>Zegar</h1>
-      Zatrzymaj/Wznów
-      <Timer />
+      <button onClick={toggleTimer}>{isActive ? "Zatrzymaj" : "Wznów"}</button>
+      {isActive && <Timer />}
     </>
   );
 };
