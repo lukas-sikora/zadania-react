@@ -1,5 +1,15 @@
+const defaultInputConfig = {
+  placeholder: "Wpisz swoje imię",
+  borderStyle: "dashed",
+  borderColor: "blue",
+};
+
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <p>Stylizowane pole tekstowe używające DecoratedInput.</p>
+    </>
+  );
 };
 
 export default App;
