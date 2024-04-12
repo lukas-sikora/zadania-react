@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 
-export const App = () => {
+const App = () => {
   const defaultButtonConfig = {
     label: "Kliknij mnie",
     onClick: () => alert("Kliknięto przycisk"),
@@ -10,7 +10,9 @@ export const App = () => {
   return (
     <>
       <p>Prosty komponent z przyciskiem.</p>
-      <Button />
+      <Button {...defaultButtonConfig} />
     </>
   );
 };
+
+export default App;
