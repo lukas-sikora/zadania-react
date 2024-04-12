@@ -1,4 +1,4 @@
-import Content from "./Context";
+import Content from "./Content";
 import Header from "./Header";
 
-export default { Content, Header };
+export { Content, Header };
