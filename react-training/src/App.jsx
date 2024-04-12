@@ -1,5 +1,21 @@
+import { useState } from "react";
+
 const App = () => {
-  return <div></div>;
+  const [filter, setFilter] = useState("");
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        placeholder="Szukaj użytkownika..."
+      />
+      <ul>
+        <li>user</li>
+      </ul>
+    </div>
+  );
 };
 
 export default App;
