@@ -2,9 +2,9 @@ import Product from "./components/Product";
 
 const App = () => {
   return (
-    <div>
-      <Product price={10} />
-    </div>
+    // Selector oraz Provider
+    <Product price={10} />
   );
 };
+
 export default App;
