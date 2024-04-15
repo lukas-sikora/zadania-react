@@ -3,7 +3,7 @@ const App = () => {
     <div>
       <ul></ul>
       <form>
-        <input name="item" required />
+        <input required />
         <button type="submit">Dodaj</button>
       </form>
       <button>Pokaż szczegóły</button>
