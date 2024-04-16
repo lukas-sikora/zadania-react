@@ -1,12 +1,7 @@
 const CourseManager = () => {
   return (
     <>
-      <form
-        onSubmit={(event) => {
-          event.preventDefault();
-          event.target.reset();
-        }}
-      >
+      <form>
         <input name="name" type="text" placeholder="Nazwa kursu" required />
         <input
           name="hours"
