@@ -1,5 +1,12 @@
+import CourseManager from "./components/CourseMenager";
+
 const App = () => {
-  return <div></div>;
+  return (
+    <>
+      <h1>Zarządzanie kursami</h1>
+      <CourseManager />
+    </>
+  );
 };
 
 export default App;
