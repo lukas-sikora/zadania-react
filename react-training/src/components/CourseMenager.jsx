@@ -27,7 +27,6 @@ const CourseManager = () => {
 
   return (
     <>
-      <h1>Zarządzanie kursami</h1>
       <form onSubmit={handleSubmit}>
         <input name="name" type="text" placeholder="Nazwa kursu" required />
         <input
