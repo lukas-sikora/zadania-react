@@ -6,21 +6,12 @@ const posts = [
   { title: "Async actions w Redux", category: "Redux" },
 ];
 
-const categories = [
-  "Wszystkie",
-  ...new Set(posts.map(({ category }) => category)),
-];
-
 const App = () => {
   return (
     <>
       <h1>Lista postów:</h1>
       <select>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
+        <option>Kategoria</option>
       </select>
       <ul>
         {posts.map(({ title }) => (
