@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 
-import { ProductDetailsMemo } from "./components/ProductDetails";
+import ProductDetails from "./components/ProductDetails";
 
 const App = () => {
   const [quantity, setQuantity] = useState(1);
@@ -19,7 +19,7 @@ const App = () => {
   return (
     <>
       <h1>Szczegóły produktu:</h1>
-      <ProductDetailsMemo product={product}>{children}</ProductDetailsMemo>
+      <ProductDetails product={product}>{children}</ProductDetails>
       <hr />
       <h2>Ilość w koszyku: {quantity}</h2>
       <button onClick={() => setQuantity((prev) => prev + 1)}>

@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-const ProductDetails = ({ product, children }) => {
+const ProductDetails = memo(({ product, children }) => {
   console.log("renderowanie product details");
 
   return (
@@ -11,6 +11,6 @@ const ProductDetails = ({ product, children }) => {
       {children}
     </>
   );
-};
+});
 
-export const ProductDetailsMemo = memo(ProductDetails);
+export default ProductDetails;
