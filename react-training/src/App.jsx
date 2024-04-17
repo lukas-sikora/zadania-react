@@ -1,3 +1,5 @@
+import { useState, useMemo } from "react";
+
 const posts = [
   { title: "React Hooks", category: "React" },
   { title: "Wprowadzenie do Reduxa", category: "Redux" },
@@ -7,19 +9,37 @@ const posts = [
 ];
 
 const App = () => {
+  const [filter, setFilter] = useState("Wszystkie");
+  const [count, setCount] = useState(0);
+
+  const filteredPosts = useMemo(() => {
+    return filter === "Wszystkie"
+      ? posts
+      : posts.filter(({ category }) => category === filter);
+  }, [filter]);
+
+  const categories = useMemo(
+    () => ["Wszystkie", ...new Set(posts.map(({ category }) => category))],
+    []
+  );
+
   return (
     <>
       <h1>Lista postów:</h1>
-      <select>
-        <option>Kategoria</option>
+      <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
       </select>
       <ul>
-        {posts.map(({ title }) => (
+        {filteredPosts.map(({ title }) => (
           <li key={title}>{title}</li>
         ))}
       </ul>
-      <h2>Licznik odświeżeń: 0</h2>
-      <button>+</button>
+      <h2>Licznik odświeżeń: {count}</h2>
+      <button onClick={() => setCount((prev) => prev + 1)}>+</button>
     </>
   );
 };
