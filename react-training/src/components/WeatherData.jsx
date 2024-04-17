@@ -1,4 +1,6 @@
-const WeatherData = ({ data }) => {
+import { memo } from "react";
+
+const WeatherData = memo(({ data }) => {
   console.log("render");
 
   return (
@@ -6,6 +8,6 @@ const WeatherData = ({ data }) => {
       <p>Dane pogodowe: {data}</p>
     </div>
   );
-};
+});
 
 export default WeatherData;

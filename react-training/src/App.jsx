@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import { fetchWeatherData } from "./utils/fetchWeatherData";
 import WeatherData from "./components/WeatherData";
@@ -7,12 +7,12 @@ const App = () => {
   const [city, setCity] = useState("New York");
   const [time, setTime] = useState(new Date());
 
-  const weatherData = fetchWeatherData(city);
+  const memoizedWeatherData = useMemo(() => fetchWeatherData(city), [city]);
 
   return (
     <>
       <h1>Aktualna pogoda w {city}:</h1>
-      <WeatherData data={weatherData} />
+      <WeatherData data={memoizedWeatherData} />
       <hr />
       <button onClick={() => setCity("London")}>Zmień miasto na Londyn</button>
       <button onClick={() => setCity("Paris")}>Zmień miasto na Paryż</button>
