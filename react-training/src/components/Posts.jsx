@@ -10,7 +10,7 @@ const Posts = ({ onDataLoaded }) => {
       const data = await fetch("https://jsonplaceholder.typicode.com/posts");
       const response = await data.json();
       setPosts(response);
-      onDataLoaded();
+      onDataLoaded(response);
     })();
   }, [onDataLoaded]);
 
