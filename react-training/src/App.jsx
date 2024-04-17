@@ -1,35 +1,35 @@
 import { useState } from "react";
 
-import { CountryStatistics } from "./components/CountryStatistics";
+import Product from "./components/Product";
 
-const countries = [
-  { name: "Polska", population: 38000000, area: 312696 },
-  { name: "Niemcy", population: 83000000, area: 357022 },
-  { name: "Francja", population: 67000000, area: 640679 },
+const productsList = [
+  { id: 1, name: "Mleko", available: true },
+  { id: 2, name: "Chleb", available: false },
 ];
 
 const App = () => {
-  const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+  const [products, setProducts] = useState(productsList);
+
+  const toggleAvailability = (productId) => {
+    const updatedProducts = products.map((product) =>
+      product.id === productId
+        ? { ...product, available: !product.available }
+        : product
+    );
+    setProducts(updatedProducts);
+  };
 
   return (
-    <>
-      <h1>Statystyki krajów:</h1>
-      <select
-        onChange={(e) =>
-          setSelectedCountry(
-            countries.find(({ name }) => name === e.target.value)
-          )
-        }
-      >
-        {countries.map(({ name }) => (
-          <option key={name} value={name}>
-            {name}
-          </option>
-        ))}
-      </select>
-      <CountryStatistics country={selectedCountry} />
-    </>
+    <div>
+      <h1>Lista produktów:</h1>
+      {products.map((product) => (
+        <Product
+          key={product.id}
+          product={product}
+          onToggle={toggleAvailability}
+        />
+      ))}
+    </div>
   );
 };
-
 export default App;
