@@ -1,5 +1,6 @@
 const Product = ({ product, onToggle }) => {
   console.log("Rendering:", product.name);
+
   return (
     <div>
       <h2>{product.name}</h2>

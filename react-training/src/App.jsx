@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import Product from "./components/Product";
 
 const productsList = [
@@ -6,7 +7,7 @@ const productsList = [
   { id: 2, name: "Chleb", available: false },
 ];
 
-export default function App() {
+const App = () => {
   const [products, setProducts] = useState(productsList);
 
   const toggleAvailability = (productId) => {
@@ -30,4 +31,6 @@ export default function App() {
       ))}
     </div>
   );
-}
+};
+
+export default App;
