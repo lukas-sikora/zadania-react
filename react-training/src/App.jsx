@@ -11,7 +11,7 @@ const App = () => {
     <>
       <h1>Lista postów:</h1>
       <select>
-        <option>Kategoria</option>
+        <option>Wszystkie</option>
       </select>
       <ul>
         {posts.map(({ title }) => (
