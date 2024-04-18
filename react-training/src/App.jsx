@@ -1,16 +1,7 @@
-import AppRoutes from "./routes/AppRoutes";
+import { HomePage, BooksPage, ContactPage, NotFoundPage } from "./pages";
 
 const App = () => {
-  return (
-    <div>
-      <nav>
-        <a>Strona Główna</a>
-        <a>Lista Książek</a>
-        <a>Kontakt</a>
-      </nav>
-      <AppRoutes />
-    </div>
-  );
+  return <div>Strona z routingiem</div>;
 };
 
 export default App;
