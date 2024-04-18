@@ -1,20 +1,16 @@
-import { BrowserRouter, Link } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AppRoutes from "./routes/AppRoutes";
+import { BooksPage, ContactPage, HomePage, NotFoundPage } from "./pages";
+
+const router = createBrowserRouter([
+  { path: "/", element: <HomePage /> },
+  { path: "/books", element: <BooksPage /> },
+  { path: "/contact", element: <ContactPage /> },
+  { path: "*", element: <NotFoundPage /> },
+]);
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <div>
-        <nav>
-          <Link to="/">Strona Główna</Link>
-          <Link to="/books">Lista Książek</Link>
-          <Link to="/contact">Kontakt</Link>
-        </nav>
-        <AppRoutes />
-      </div>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
