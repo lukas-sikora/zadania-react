@@ -57,7 +57,9 @@ const Calculator = () => {
 
   return (
     <>
-      <div>Wprowadź dane: {state.input || state.total}</div>
+      <div>
+        Wprowadź dane: <span>{state.input || state.total}</span>
+      </div>
       <div>
         {numberArray.map((digit) => (
           <button
