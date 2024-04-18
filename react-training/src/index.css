@@ -67,3 +67,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26px;
+}
+
+.wrapper {
+  width: 600px;
+}
+h1 {
+  text-align: center;
+}
