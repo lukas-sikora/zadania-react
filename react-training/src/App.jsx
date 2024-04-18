@@ -10,7 +10,12 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      Strona z routingiem
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;
