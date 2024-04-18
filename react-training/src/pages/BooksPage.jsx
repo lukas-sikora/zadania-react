@@ -1,4 +1,4 @@
-const BookPage = () => {
+const BooksPage = () => {
   return (
     <>
       <h1>Lista Książek</h1>
@@ -7,4 +7,4 @@ const BookPage = () => {
   );
 };
 
-export default BookPage;
+export default BooksPage;
