@@ -7,6 +7,7 @@ import Reservation from "./pages/reservation/Reservation";
 import RestaurantInfo from "./pages/restaurationInfo/RestaurantInfo";
 import Layout from "./components/Layout";
 import Summary from "./pages/summary/Summary";
+import NotFound from "./pages/notFound/NotFound";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const App = () => {
         },
         { path: "/reservation", element: <Reservation /> },
         { path: "/info", element: <RestaurantInfo /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ]);
