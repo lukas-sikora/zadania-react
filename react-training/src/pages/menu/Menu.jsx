@@ -7,7 +7,9 @@ const Menu = () => {
     <ul>
       {MENU_ITEMS.map(({ id, name }) => (
         <li key={id}>
-          <Link to={`/menu/${id}`}>{name}</Link>
+          <h3>
+            <Link to={`/menu/${id}`}>{name}</Link>
+          </h3>
         </li>
       ))}
       <Outlet />

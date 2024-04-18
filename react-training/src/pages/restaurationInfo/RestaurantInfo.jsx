@@ -1,5 +1,5 @@
 const RestaurantInfo = () => {
-  return <h2>Informacje o Restauracji</h2>;
+  return <h3>Informacje o Restauracji</h3>;
 };
 
 export default RestaurantInfo;
