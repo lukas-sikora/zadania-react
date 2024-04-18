@@ -1,15 +1,19 @@
+import { BrowserRouter, Link } from "react-router-dom";
+
 import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
   return (
-    <div>
-      <nav>
-        <a>Strona Główna</a>
-        <a>Lista Książek</a>
-        <a>Kontakt</a>
-      </nav>
-      <AppRoutes />
-    </div>
+    <BrowserRouter>
+      <div>
+        <nav>
+          <Link to="/">Strona Główna</Link>
+          <Link to="/books">Lista Książek</Link>
+          <Link to="/contact">Kontakt</Link>
+        </nav>
+        <AppRoutes />
+      </div>
+    </BrowserRouter>
   );
 };
 
